@@ -5,7 +5,7 @@ $(document).ready(function () {
   // Output a message to indicate that jQuery is being used
   console.log("We are using jQuery");
 
-  // // Select all <button> elements and attach a click event handler
+  // Select all <button> elements and attach a click event handler
   // $("button").click(function () {
   //   console.log("Button clicked !", this);
   // });
@@ -27,7 +27,7 @@ $(document).ready(function () {
   //  $('.class').hide    //class
   //  });
 
-  // Types of Selectors
+  // TYPES OF SELECTORS
   // 1. Element selector
   // $('button').click();
   // //   // 2.Id selector
@@ -41,7 +41,7 @@ $(document).ready(function () {
   // //   $("button:first").click(); //first button
   // //   $("*").click(); //clicks on all the elements
 
-  // ***Events***
+  // TYPES OF EVENTS
   // 1. Mouse Event : Click, dbClick, mousecenter, mouseleave
   // 2. Keyboard Event: Keypress, keydown, MediaKeyStatusMap
   // 3. form Event: Submit, Change, focus, blur
@@ -57,11 +57,19 @@ $(document).ready(function () {
   //   console.log("mouse entered !", this);
   // });
 
-  $("button").hover(function () {
-    console.log(" you hovered on;", this);
-  });
+  // $("button").hover(function () {
+  //   console.log(" you hovered on:", this);
+  // });
 
-  $("button").click(function () {
-    console.log("Button clicked !", this);
+  // $("button").click(function () {
+  //   console.log("Button clicked !", this);
+  // });
+
+  //ON METHOD
+  $("button").on({
+    click,
+    function() {
+      console.log("on clicked Button:", this);
+    },
   });
 });
